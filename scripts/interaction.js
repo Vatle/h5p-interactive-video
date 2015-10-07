@@ -78,6 +78,9 @@ H5P.InteractiveVideoInteraction = (function ($, EventDispatcher) {
             }
           }
         }
+        if (!self.dialogDisabled && library !== 'H5P.Nil') {
+                openDialog();     //Create dialog regardless of person clicking it or not.
+        }
       });
 
       // Touch area for button
