@@ -125,6 +125,9 @@ H5P.InteractiveVideoInteraction = (function ($, EventDispatcher) {
       }
 
       self.trigger('display', $interaction);
+	  if (!self.dialogDisabled && library !== 'H5P.Nil') {
+                openDialog();					//change 21.10.15 Opening dialog whenever a button is created
+				}
       setTimeout(function () {
         if ($interaction) {
           // Transition in
